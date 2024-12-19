@@ -36,7 +36,7 @@ def predict():
 
     # Make predictions
     predictions = model.predict(img_array)
-    predicted_class = np.argmax(predictions, axis=1)
+    predicted_class = np.argmax(predictions, axis=1)# activation function argmax
 
     # Return the predicted class as a response
     return jsonify({'predicted_class': int(predicted_class[0])})
